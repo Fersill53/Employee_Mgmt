@@ -17,7 +17,7 @@ const main = async () => {
         case 'Add employee':
             const newEmployee = await addEmployeePrompt();
             const newEmployeeId = await addEmployee(newEmployee);
-            console.log(`Successfully added new employee with ID: ${`newEmployeeId`);
+            console.log(`Successfully added new employee with ID: ${newEmployeeId}`);
             break;
 
         case 'Update employee':
@@ -31,7 +31,7 @@ const main = async () => {
             break;
 
         case 'Exit':
-            console.log('Exiting Employee Management App);
+            console.log('Exiting Employee Management App');
             process.exit(O);
         default:
             console.log('Invalid entry. Please try again');
