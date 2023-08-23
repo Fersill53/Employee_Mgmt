@@ -32,7 +32,7 @@ const main = async () => {
 
         case 'Exit':
             console.log('Exiting Employee Management App');
-            process.exit(O);
+            process.exit(0);
         default:
             console.log('Invalid entry. Please try again');
         }
