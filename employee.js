@@ -1,6 +1,6 @@
 const connection = require('./db');
 
-const getEmployee = () => {
+const getAllEmployee = () => {
     return new Promise((resolve, reject) => {
         connection.query('SELECT * FROM employees', (err, results) => {
             if (err) reject (err);
@@ -32,7 +32,7 @@ const updateEmployee = (id, role) => {
 };
 
 module.exports = {
-    getEmployee,
+    getAllEmployee,
     addEmployee,
     updateEmployee,
 };

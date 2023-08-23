@@ -11,7 +11,7 @@ const mainPrompt = () => {
     ]);
 };
 
-const addEmployee = () => {
+const addEmployeePrompt = () => {
     return inquirer.prompt ([
         {
             type: 'input',
@@ -46,7 +46,7 @@ const addEmployee = () => {
     ]);
 };
 
-const updateEmployee = () => {
+const updateEmployeePrompt = () => {
     return inquirer.prompt([
         {
             type: 'input',
@@ -68,6 +68,6 @@ const updateEmployee = () => {
 
 module.exports = {
     mainPrompt,
-    addEmployee,
-    updateEmployee,
+    addEmployeePrompt,
+    updateEmployeePrompt,
 };

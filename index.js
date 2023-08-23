@@ -1,6 +1,6 @@
 const { mainPrompt, addEmployeePrompt, updateEmployeePrompt } = require('./prompts');
 
-const { getEmployee, addEmployee, updateEmployee } = require('./employee');
+const { getAllEmployee, addEmployee, updateEmployee } = require('./employee');
 
 const main = async () => {
     console.log('Employee Management App');
@@ -10,7 +10,7 @@ const main = async () => {
 
     switch (action) {
         case 'View employees':
-            const employees = await getEmployee();
+            const employees = await getAllEmployee();
             console.table(employees);
             break;
         
