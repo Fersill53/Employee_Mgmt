@@ -11,9 +11,9 @@ const getAllEmployee = () => {
 
 const addEmployee = (employee) => {
     return new Promise((resolve, reject) => {
-        connection.query('INSERT INTO employees SET ?', employee, (err, result) => {
+        connection.query('INSERT INTO employees SET ?', employee, (err, results) => {
             if (err) reject (err);
-            resolve(result.insertID);
+            resolve(results);
         });
     });
 };

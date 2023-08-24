@@ -20,12 +20,12 @@ const addEmployeePrompt = () => {
         },
         {
             type: 'input',
-            name: 'firstName',
+            name: 'first_name',
             message: 'Please enter first name',
         },
         {
             type: 'input',
-            name: 'lastName',
+            name: 'last_name',
             message: 'Please enter last name',
         },
         {
