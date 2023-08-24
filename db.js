@@ -7,4 +7,9 @@ const connection = mysql.createConnection ({
     database: 'manage_emp',
 });
 
-module.exports = connection;
+
+connection.connect(function (err) {
+    if (err) throw err;
+  });
+  
+  module.exports = connection;

@@ -7,20 +7,22 @@ const main = async () => {
     
     while (true) {
         const { action } = await mainPrompt();
+        console.log(action);
 
     switch (action) {
-        case 'View employees':
+        case 'View Employees':
             const employees = await getAllEmployee();
+            console.log(employees);
             console.table(employees);
             break;
         
-        case 'Add employee':
+        case 'Add Employee':
             const newEmployee = await addEmployeePrompt();
             const newEmployeeId = await addEmployee(newEmployee);
             console.log(`Successfully added new employee with ID: ${newEmployeeId}`);
             break;
 
-        case 'Update employee':
+        case 'Update Employee':
             const { id, role } = await updateEmployeePrompt();
             const isUpdated = await updateEmployee(id, role);
             if (isUpdated) {

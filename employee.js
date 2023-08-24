@@ -31,7 +31,7 @@ const updateEmployee = (id, role) => {
     });
 };
 
-connection.end();
+
 
 module.exports = {
     getAllEmployee,
