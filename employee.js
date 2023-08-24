@@ -10,7 +10,7 @@ const getAllEmployee = () => {
 };
 
 const addEmployee = (employee) => {
-    return new Promise((reslove, reject) => {
+    return new Promise((resolve, reject) => {
         connection.query('INSERT INTO employees SET ?', employee, (err, result) => {
             if (err) reject (err);
             resolve(result.insertID);
@@ -19,7 +19,7 @@ const addEmployee = (employee) => {
 };
 
 const updateEmployee = (id, role) => {
-    return new Promise((reslove, reject) => {
+    return new Promise((resolve, reject) => {
         connection.query(
             'UPDATE employees SET role = ? WHERE id = ?',
             [role, id],
